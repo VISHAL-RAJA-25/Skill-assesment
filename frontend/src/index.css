@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root,
+[data-theme="dark"] {
+  --bg-primary: #0f0c29;
+  --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --bg-card2: rgba(255, 255, 255, 0.08);
+  --bg-input: rgba(255, 255, 255, 0.08);
+  --bg-editor: rgba(0, 0, 0, 0.45);
+  --bg-schema: rgba(0, 0, 0, 0.3);
+  --border: rgba(255, 255, 255, 0.12);
+  --border-light: rgba(255, 255, 255, 0.07);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.55);
+  --text-muted: rgba(255, 255, 255, 0.35);
+  --text-code: #7fdbff;
+  --nav-bg: rgba(15, 12, 41, 0.97);
+  --scrollbar: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="light"] {
+  --bg-primary: #eef0f8;
+  --bg-gradient: linear-gradient(135deg, #dde1f5, #c9cef0, #dde6f5);
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card2: rgba(255, 255, 255, 0.95);
+  --bg-input: rgba(255, 255, 255, 0.95);
+  --bg-editor: #f5f6fa;
+  --bg-schema: #eef1fc;
+  --border: rgba(0, 0, 0, 0.12);
+  --border-light: rgba(0, 0, 0, 0.06);
+  --text-primary: #1a1a2e;
+  --text-secondary: rgba(0, 0, 0, 0.58);
+  --text-muted: rgba(0, 0, 0, 0.38);
+  --text-code: #1565c0;
+  --nav-bg: rgba(238, 240, 248, 0.97);
+  --scrollbar: rgba(0, 0, 0, 0.18);
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s, color 0.25s;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes timerFlash {
+
+  0%,
+  100% {
+    opacity: 1
+  }
+
+  50% {
+    opacity: 0.25
+  }
+}
+
+@keyframes timerShake {
+
+  0%,
+  100% {
+    transform: translateX(0)
+  }
+
+  25% {
+    transform: translateX(-4px)
+  }
+
+  75% {
+    transform: translateX(4px)
+  }
+}
+
+@keyframes timerPulse {
+
+  0%,
+  100% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.06)
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+.timer-danger {
+  animation: timerFlash 0.5s ease-in-out infinite, timerShake 0.5s ease-in-out infinite;
+}
+
+.timer-warning {
+  animation: timerPulse 0.9s ease-in-out infinite;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar);
+  border-radius: 3px;
+}
+
+a {
+  color: #7fdbff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
