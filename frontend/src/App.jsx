@@ -4,9 +4,9 @@ import Dashboard from './pages/Dashboard';
 import TestEngine from './pages/TestEngine';
 import Results from './pages/Results';
 import History from './pages/History';
-import QuestionReview from './pages/QuestionReview';
-import Progress from './pages/Progress';
-import AdminPanel from './pages/AdminPanel';
+import QuestionReview from './pages/Questionreview';
+import Progress from './pages/progress';
+import AdminPanel from './pages/adminpanel';
 
 function PrivateRoute({ children }) {
   return localStorage.getItem('token') ? children : <Navigate to="/" />;
