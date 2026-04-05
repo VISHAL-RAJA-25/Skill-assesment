@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../api';
 import { useTheme } from '../ThemeContext';
-import Themetoggle from '../components/Themetoggle';
+import Themetoggle from '../Components/Themetoggle';
 
 const SKILLS = [
     { key: 'overall', label: 'Overall', color: '#667eea' },

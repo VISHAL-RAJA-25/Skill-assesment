@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../api';
-import Themetoggle from '../components/Themetoggle';
+import Themetoggle from '../Components/Themetoggle';
 import { useTheme } from '../ThemeContext';
 
 export default function Auth() {

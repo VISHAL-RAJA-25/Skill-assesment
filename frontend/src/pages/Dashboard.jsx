@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Themetoggle from '../components/Themetoggle';
-import Streakwidget from '../components/Streakwidget';
+import Themetoggle from '../Components/Themetoggle';
+import Streakwidget from '../Components/Streakwidget';
 import { useTheme } from '../ThemeContext';
 
 const SKILLS = [

@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Editor from '@monaco-editor/react';
 import api from '../api';
 import { useTheme } from '../ThemeContext';
-import Themetoggle from '../components/Themetoggle';
+import Themetoggle from '../Components/Themetoggle';
 
 const MCQ_TOPICS = ['aptitude', 'networks'];
 const LANGUAGES = [

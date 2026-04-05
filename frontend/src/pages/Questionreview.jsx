@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTheme } from '../ThemeContext';
-import Themetoggle from '../components/Themetoggle';
+import Themetoggle from '../Components/Themetoggle';
 
 const SKILL_META = {
     aptitude: { label: 'Aptitude', icon: '🧮', color: '#667eea' },
