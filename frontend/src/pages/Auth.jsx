@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../api';
-import ThemeToggle from '../components/ThemeToggle';
+import Themetoggle from '../components/Themetoggle';
 import { useTheme } from '../ThemeContext';
 
 export default function Auth() {
@@ -86,7 +86,7 @@ export default function Auth() {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: bg, fontFamily: "'Segoe UI',sans-serif", position: 'relative' }}>
-      <div style={{ position: 'absolute', top: 16, right: 16 }}><ThemeToggle /></div>
+      <div style={{ position: 'absolute', top: 16, right: 16 }}><Themetoggle /></div>
 
       <div style={{ background: cardBg, backdropFilter: 'blur(20px)', border: `1px solid ${border}`, borderRadius: 20, padding: '44px 40px', width: screen === 'role' ? 440 : 380, color: text }}>
 

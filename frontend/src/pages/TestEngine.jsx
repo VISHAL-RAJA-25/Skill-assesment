@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Editor from '@monaco-editor/react';
 import api from '../api';
 import { useTheme } from '../ThemeContext';
-import ThemeToggle from '../components/ThemeToggle';
+import Themetoggle from '../components/Themetoggle';
 
 const MCQ_TOPICS = ['aptitude', 'networks'];
 const LANGUAGES = [
@@ -313,7 +313,7 @@ export default function TestEngine() {
           <span style={{ ...pill, background: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.07)', color: text }}>Q {current + 1} / {questions.length}</span>
         </div>
         <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
-          <ThemeToggle />
+          <Themetoggle />
           <div className={timerClass} style={{ fontSize: 18, fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: timerColor, minWidth: 64, textAlign: 'right', padding: '4px 8px', borderRadius: 8, background: timeLeft <= 10 ? 'rgba(255,68,68,0.12)' : timeLeft <= 30 ? 'rgba(255,217,61,0.1)' : 'transparent', transition: 'background 0.3s' }}>
             ⏱ {Math.floor(timeLeft / 60)}:{String(timeLeft % 60).padStart(2, '0')}
           </div>

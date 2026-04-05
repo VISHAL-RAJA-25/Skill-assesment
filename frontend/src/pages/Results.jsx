@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import api from '../api';
 import { useTheme } from '../ThemeContext';
-import ThemeToggle from '../components/ThemeToggle';
+import Themetoggle from '../components/Themetoggle';
 
 const SKILL_META = {
     aptitude: { label: 'Aptitude', icon: '🧮', color: '#667eea' },
@@ -81,7 +81,7 @@ export default function Results() {
             <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px 28px', borderBottom: `1px solid ${border}`, background: navBg, backdropFilter: 'blur(12px)' }}>
                 <span style={{ fontWeight: 700, fontSize: 18 }}>⚡ SkillAssess</span>
                 <div style={{ display: 'flex', gap: 10 }}>
-                    <ThemeToggle />
+                    <Themetoggle />
                     <button style={gBtn(isDark, text)} onClick={() => navigate('/history')}>📋 History</button>
                     <button style={gBtn(isDark, text)} onClick={() => navigate('/dashboard')}>← Dashboard</button>
                 </div>

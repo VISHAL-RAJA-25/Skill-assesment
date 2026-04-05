@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../api';
 import { useTheme } from '../ThemeContext';
-import ThemeToggle from '../components/ThemeToggle';
+import Themetoggle from '../components/Themetoggle';
 
 const TABS = ['📊 Dashboard', '❓ Questions', '👥 Students', '📈 Analytics'];
 
@@ -111,7 +111,7 @@ export default function AdminPanel() {
                     <span style={{ fontSize: 12, padding: '3px 10px', borderRadius: 20, background: 'rgba(255,107,107,0.2)', color: '#ff6b6b', fontWeight: 600 }}>ADMIN</span>
                 </div>
                 <div style={{ display: 'flex', gap: 10 }}>
-                    <ThemeToggle />
+                    <Themetoggle />
                     <button style={gBtn(isDark, text)} onClick={() => navigate('/dashboard')}>← Dashboard</button>
                     <button style={{ padding: '7px 16px', borderRadius: 8, border: '1px solid rgba(67,233,123,0.4)', background: 'rgba(67,233,123,0.1)', color: '#43e97b', cursor: 'pointer', fontSize: 13, fontWeight: 600 }}
                         onClick={handleExportCSV}>⬇ Export CSV</button>

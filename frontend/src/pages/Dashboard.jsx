@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ThemeToggle from '../components/ThemeToggle';
-import StreakWidget from '../components/StreakWidget';
+import Themetoggle from '../components/Themetoggle';
+import Streakwidget from '../components/Streakwidget';
 import { useTheme } from '../ThemeContext';
 
 const SKILLS = [
@@ -37,7 +37,7 @@ export default function Dashboard() {
       <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px 28px', borderBottom: `1px solid ${navBdr}`, background: navBg, backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 100 }}>
         <span style={{ fontWeight: 700, fontSize: 18 }}>⚡ SkillAssess</span>
         <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
-          <ThemeToggle />
+          <Themetoggle />
           <button style={gBtn(isDark, text)} onClick={() => navigate('/progress')}>📈 Progress</button>
           <button style={gBtn(isDark, text)} onClick={() => navigate('/history')}>📋 History</button>
           {isAdmin && <button style={{ ...gBtn(isDark, text), color: '#ff6b6b', borderColor: 'rgba(255,107,107,0.3)' }} onClick={() => navigate('/admin')}>🛡 Admin</button>}
@@ -46,7 +46,7 @@ export default function Dashboard() {
       </nav>
 
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '32px 24px' }}>
-        <StreakWidget />
+        <Streakwidget />
 
         <h2 style={{ fontSize: 24, fontWeight: 700, textAlign: 'center', marginBottom: 6, color: text }}>Choose a Skill to Practice</h2>
         <p style={{ textAlign: 'center', color: muted, marginBottom: 28, fontSize: 14 }}>Select a skill and difficulty to begin your assessment</p>
